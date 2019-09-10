@@ -46,7 +46,7 @@ for device in devices:
     if(device.name == label_wiimote_buttons):
         buttons_location = device.path
 if buttons_location == "Not Found":
-    print "Error finding wiimote. "
+    print ("Error finding wiimote. ")
 
 # creates object to store data
 wiimote_buttons = InputDevice(buttons_location)
@@ -55,5 +55,27 @@ wiimote_buttons = InputDevice(buttons_location)
 # no built in status of holding a button, so
 # would need to implement myself.
 for event in wiimote_buttons.read_loop():
-    print(categorize(event))
-    print(event.value)
+    if event.type == ecodes.EV_KEY:
+        print(event.value)
+        if event.code == up:
+            print("Up")
+        elif event.code == down:
+            print("Down")
+        elif event.code == left:
+            print("Left")
+        elif event.code == right:
+            print("Right")
+        elif event.code == aBtn:
+            print("(A)")
+        elif event.code == bBtn:
+            print("(B)")
+        elif event.code == plus:
+            print("(+)")
+        elif event.code == minus:
+            print("(-)")
+        elif event.code == home:
+            print("(Home)")
+        elif event.code == btn1:
+            print("(1)")
+        elif event.code == btn2:
+            print("(2)")
