@@ -3,8 +3,6 @@
 # Gr. 12 Digital Electronics
 
 # To-do Next Time:
-    # From tutorial, have console just show char
-        # instead of all that junk.
     # Add nunchuck as well, and try to get
         #both working simutaniously
     # Not really in this file, but look through
