@@ -29,4 +29,7 @@ var client = {
     readCamera: function () {
         this.socket.send("read_camera");
     }
+    rickRoll: function () {
+        this.socket.send("rick-roll");
+    }
 };

@@ -45,7 +45,8 @@ class WebSocket(tornado.websocket.WebSocketHandler):
         if message == "read_camera":
             self.camera_loop = PeriodicCallback(self.loop, 10)
             self.camera_loop.start()
-
+        else if message == "rick-roll":
+            os.system("vlc /home/jessie/Downloads/never-gonna-give-you-up-video.mp3")
         # Extensibility for other methods
         else:
             print("Unsupported function: " + message)
